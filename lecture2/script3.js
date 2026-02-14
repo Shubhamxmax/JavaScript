@@ -1,4 +1,5 @@
 let marks=[33,67,89,90,76]
+marks.push(8)
 
 console.log(marks)
 console.log(marks.length)
