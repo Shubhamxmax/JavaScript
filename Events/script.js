@@ -40,11 +40,6 @@ btn1.addEventListener("click", ()=>{
 
 btn1.removeEventListener("click",handler3) // removing  an event
 
-
-
-
-
-
 let box=document.querySelector("div");
 box.onmouseover = (e) =>{
     console.log(e)
