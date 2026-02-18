@@ -22,7 +22,7 @@ choices.forEach((choice)=>{
 const genCompChoice= ()=>{
     const options=["rock","paper","scissor"];
     //rock,paper,scissor
-    const rand=Math.floor(Math.random()*3); // Math.random() will give values in decimal ranges from 0 to 1 but when mutliplied by 3 it will give value to 0 to 2 but in decimal so then we use Math.floor() to remove decimal values
+    const rand=Math.floor(Math.random()*3); //The  Math.random() will give values in decimal ranges from 0 to 1 but when mutliplied by 3 it will give value to 0 to 2 but in decimal so then we use Math.floor() to remove decimal values
     return options[rand];
 
 }
