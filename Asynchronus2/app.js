@@ -1,4 +1,13 @@
+/*Callback hell occurs when multiple asynchronous operations are nested inside callbacks, resulting in deeply indented and hard-to-read code.
+
+To solve this problem, Promises were introduced. Promises handle asynchronous operations using .then() for success and .catch() for errors, improving structure and error handling.
+
+Async/Await is built on top of Promises and allows developers to write asynchronous code that looks synchronous. This makes the code easier to read, write, and debug while maintaining proper error handling.*/
+
+
 // CallbackHell<<Promises<<Async-Await
+
+
 
 function getData(dataid,getNextData){
 
