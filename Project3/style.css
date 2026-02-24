@@ -136,4 +136,5 @@ button{
     width: 100px;
     height: 23px;
     border-radius: 6px;
+    cursor:pointer;
 }

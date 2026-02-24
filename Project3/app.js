@@ -1,6 +1,7 @@
 let totalexpense=0;
 let budgetleft=0;
 let budget=0;
+
 const budgetInput = document.querySelector("#budget");
 const addBudgetBtn = document.querySelector("#adding");
 const showbudget = document.querySelector("#show-budget");
@@ -11,8 +12,7 @@ const showexpense = document.querySelector("#show-expense");
 const showbudgetleft=document.querySelector("#left");
 const table=document.querySelector(".table");
 const scrobble=document.querySelector(".scrobble");
-
-
+const reset=document.querySelector("#reset");
 
 
 addBudgetBtn.addEventListener("click", () => {
@@ -34,19 +34,15 @@ const showbudget1=(value)=>{
 
 addexpense.addEventListener("click",()=>{
         
-        if(budgetInput.value!="" && expensename.value!=="" && amount.value!==""){   if(budget<amount.value){
-              alert("Not Enough Money");
-              disablexpense1();
-             }
-            if(budgetleft>amount.value && budgetleft!==0){
-                alert("Not Enough Money");
-                disablexpense1();
-            }
+        if(budgetInput.value!="" && expensename.value!=="" && amount.value!==""){   if(totalexpense+parseInt(amount.value)>parseInt(budgetInput.value)){
+               return;
+              }
             totalexpense=totalexpense+parseInt(amount.value);
             budgetleft=parseInt(budgetInput.value)-totalexpense;
             showbudgetleft.innerText=budgetleft;
             showexpense.innerText=totalexpense;
             showhistory();
+            removeItem();
             resetexpense();}
             else{
                 disablexpense1();
@@ -55,6 +51,7 @@ addexpense.addEventListener("click",()=>{
 
 
 const disablexpense1=()=>{
+   
 
 }
 
@@ -74,51 +71,39 @@ const showhistory = () => {
     `;
     row.classList.add("newtable")//add a new class to row 
     scrobble.appendChild(row);
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+const removeItem=()=>{
+    const removes = document.querySelectorAll(".remove");
+    removes.forEach((remove1)=>{
+            
+            remove1.addEventListener("click",()=>{
+            const row=remove1.parentElement.parentElement;
+            const amount=row.children[1].innerText;
+            console.log(amount);
+            totalexpense=totalexpense-parseInt(amount);
+            budgetleft=budgetleft+parseInt(amount);
+            showbudgetleft.innerText=budgetleft;
+            showexpense.innerText=totalexpense;
+            console.log(totalexpense);
+            remove1.parentElement.parentElement.remove();
+           })
+    })
+    }
+
+reset.addEventListener("click",()=>{
+    // budgetInput.disabled = fasle;
+    addBudgetBtn.disabled = false;
+    budgetInput.disabled = false;
+    showbudget.innerText="";
+    budgetInput.value="";
+    amount.value="";
+    showexpense.innerText="";
+    showbudgetleft.innerText="";
+
+
+})
+
 
 // const showhistory = () => {
 
