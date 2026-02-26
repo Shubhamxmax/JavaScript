@@ -51,11 +51,11 @@ button:hover {
 <script>
   const requesturl = 'https://api.github.com/users/Shubhamxmax'
   const xhr = new XMLHttpRequest()
-  xhr.open('GET', requesturl)
-  xhr.send()
+  xhr.open('GET', requesturl)//prepare request
+  xhr.send()//request is end to browser
 
 
-  xhr.onreadystatechange = function () {
+  xhr.onreadystatechange = function () {//now manipulate the response pf request sent
     if (xhr.readyState === 4) {//4 because on 4 satate server provide the information
       const data = JSON.parse(this.responseText)//responsetext(variable) that store the value of response from server
 
