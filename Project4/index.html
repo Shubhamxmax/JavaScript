@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="weather">
+        <div class="heading">
+        <h2>Weather App</h2>
+        </div>
+        <div class="search">
+            <input type="text" id="searchcity" placeholder="Enter City Name">
+            <button id="clicked">
+                <p class="size">Search</p>
+            </button>          
+        </div>
+        <div>
+            <h2 id="cityname">Kolkata</h2>
+            <img src="sunny.png" id="image">
+        </div>
+        <div class="temp">
+            <p class="size" style="font-size: 1.5rem;" id="temperature"><b>18 °C</b></p>
+            <p class="size" style="color: gray;" id="description">Feels Hot</p>
+        </div>
+        <div class="property">
+            <div class="new">
+         <img src="humid.png" id="image2">
+          <div class="info">
+         <p class="size">Humidity:</p>
+         <p class="size" id="humiddetail">62 %</p>
+         </div>
+         </div>
+        <div class="new">
+         <img src="wind.jpg" id="image1">
+         <div class="info">
+         <p class="size">Wind:</p>
+         <p class="size" id="windmeasure">62 m/s</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
