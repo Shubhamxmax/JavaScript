@@ -65,8 +65,8 @@ const showhistory = () => {
     let row = document.createElement("div");
 
     row.innerHTML = `
-        <div class="exp"><b>${expensename.value}</b></div>
-        <div class="exp"><b>${amount.value}</b></div>
+        <div class="newexp">${expensename.value}</div>
+        <div class="newexp">${amount.value}</div>
         <div class="exp"><button class="remove">Remove</button></div>
     `;
     row.classList.add("newtable")//add a new class to row 
@@ -100,10 +100,15 @@ reset.addEventListener("click",()=>{
     amount.value="";
     showexpense.innerText="";
     showbudgetleft.innerText="";
-
-
+    removescrobbleitem();
 })
 
+const removescrobbleitem=()=>{
+    const scrobbleitems=document.querySelectorAll(".newtable"); 
+    scrobbleitems.forEach((item)=>{
+        item.remove();
+    })
+}
 
 // const showhistory = () => {
 

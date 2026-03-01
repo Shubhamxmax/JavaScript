@@ -10,6 +10,8 @@ h1{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
+    font-size: 3.5vw;
+    font-weight: 800;
 }
 .big-container{
     display:flex;
@@ -51,6 +53,7 @@ h1{
     padding-top: 10px;
     background-color: blanchedalmond;
     border-radius: 20px;
+    
 }
 .add-expense{
     width:100%;
@@ -128,6 +131,7 @@ button{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.95rem;
 }
 .remove{
     background-color: red;
@@ -137,4 +141,9 @@ button{
     height: 23px;
     border-radius: 6px;
     cursor:pointer;
+}
+.newexp{
+    text-align: center;
+    width:28%;
+    font-size: 0.95rem;
 }

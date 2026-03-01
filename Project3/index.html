@@ -1,65 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Budget Tracker</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Budget Tracker System</h1>
     <div class="big-container">
-        <div class="container">
-            <div class="add-info">
-                <div class="add-budget">
-                    <h3 >Add Budget</h3>
-                    <div class="inputbudget">
-                        <p>Budget:</p>
-                        <input type="text" inputmode="numeric"  placeholder="Enter Budget" id="budget">
-                    </div>
-                    <button id="adding">Add Budget</button>
-                </div>
-                <div class="add-expense">
-                    <h3>Add Expense</h3>
-                    <div class="ExpenseTitle">
-                        <p>Expense Title:</p>
-                        <input type="text" id="expensename">
-                    </div>
-                    <div class="ExpenseAmount">
-                        <p>Amount:</p>
-                        <input type="text" id="amount">
-                    </div>
-                    <button id="addexpense">Add Expense</button>
-                </div>
-                <button id="reset"> Reset All</button>
+      <div class="container">
+        <div class="add-info">
+          <div class="add-budget">
+            <h3>Add Budget</h3>
+            <div class="inputbudget">
+              <p>Budget:</p>
+              <input
+                type="text"
+                inputmode="numeric"
+                placeholder="Enter Budget"
+                id="budget"
+              />
             </div>
-            <div class="show-info">
-                <div class="information">
-                    <div class="amt">
-                        <p>Total Budget:</p>
-                        <p id="show-budget">0</p>
-                    </div>
-                    <div class="amt">
-                        <p>Total Expense:</p>
-                        <p id="show-expense">0</p>
-                    </div>
-                    <div class="amt">
-                        <p>Budget Left:</p>
-                        <p id="left"></p>
-                    </div>
-                </div>
-                <p id="text">Expense History:</p>
-                <div class="table">
-                    
-                        <div class="exp"><b>Expense Name</b></div>
-                        <div class="exp"><b>Amount</b></div>
-                        <div class="exp"><b>Action</b></div>
-
-                </div>
-                <div class="scrobble"></div>
+            <button id="adding">Add Budget</button>
+          </div>
+          <div class="add-expense">
+            <h3>Add Expense</h3>
+            <div class="ExpenseTitle">
+              <p>Expense Title:</p>
+              <input type="text" id="expensename" />
             </div>
+            <div class="ExpenseAmount">
+              <p>Amount:</p>
+              <input type="text" id="amount" />
+            </div>
+            <button id="addexpense">Add Expense</button>
+          </div>
+          <button id="reset">Reset All</button>
         </div>
+        <div class="show-info">
+          <div class="information">
+            <div class="amt">
+              <p>Total Budget:</p>
+              <p id="show-budget">0</p>
+            </div>
+            <div class="amt">
+              <p>Total Expense:</p>
+              <p id="show-expense">0</p>
+            </div>
+            <div class="amt">
+              <p>Budget Left:</p>
+              <p id="left"></p>
+            </div>
+          </div>
+          <p id="text">Expense History:</p>
+          <div class="table">
+            <div class="exp"><b>Expense Name</b></div>
+            <div class="exp"><b>Amount</b></div>
+            <div class="exp"><b>Action</b></div>
+          </div>
+          <div class="scrobble"></div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
