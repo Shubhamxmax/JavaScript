@@ -41,7 +41,7 @@ addexpense.addEventListener("click",()=>{
             budgetleft=parseInt(budgetInput.value)-totalexpense;
             showbudgetleft.innerText=budgetleft;
             showexpense.innerText=totalexpense;
-            showhistory();
+            addhistory();
             removeItem();
             resetexpense();}
             else{
@@ -60,13 +60,13 @@ const resetexpense=()=>{
     amount.value=""; 
 }
 
-const showhistory = () => {
+const addhistory = () => {
 
     let row = document.createElement("div");
 
     row.innerHTML = `
-        <div class="newexp">${expensename.value}</div>
-        <div class="newexp">${amount.value}</div>
+        <div class="exp">${expensename.value}</div>
+        <div class="exp">${amount.value}</div>
         <div class="exp"><button class="remove">Remove</button></div>
     `;
     row.classList.add("newtable")//add a new class to row 
@@ -75,11 +75,14 @@ const showhistory = () => {
 
 const removeItem=()=>{
     const removes = document.querySelectorAll(".remove");
+    
     removes.forEach((remove1)=>{
+            if (remove1.dataset.listenerAdded) return; // skip already-attached buttons
+           remove1.dataset.listenerAdded = "true";
             
             remove1.addEventListener("click",()=>{
             const row=remove1.parentElement.parentElement;
-            const amount=row.children[1].innerText;
+            const amount=row.children[1].innerText.trim();
             console.log(amount);
             totalexpense=totalexpense-parseInt(amount);
             budgetleft=budgetleft+parseInt(amount);
@@ -156,4 +159,3 @@ const removescrobbleitem=()=>{
 // removeBtn.addEventListener("click", () => {
 //     row.remove();
 // });
-
